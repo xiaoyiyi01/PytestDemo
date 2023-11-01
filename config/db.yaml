@@ -1,0 +1,33 @@
+db1:
+  host: 192.168.18.132    #本机url
+  user: root              #主机用户名
+  password: mysql      #主机用户名密码
+  database: test       #数据库名字
+  charset: utf8        #不能写成utf-8
+  port: 3306              #端口
+  autocommit: True  #自动二次确认  False是默认，每次增、删、改都需要执行 conn.commit()命令进行二次确认
+
+db2:
+  host: 192.168.18.134    #本机url
+  user: root              #主机用户名
+  password: mysql      #主机用户名密码
+  database: test       #数据库名字
+  charset: utf8        #不能写成utf-8
+  port: 3306               #端口
+  autocommit: True  #自动二次确认  False是默认，每次增、删、改都需要执行 conn.commit()命令进行二次确认
+
+
+#总结：
+# 1.查询语句可以正常执行并获取结果
+# cursor.execute(sql1)
+# 2.插入语句能够执行 但是并没有影响表数据
+# cursor.execute(sql2,('jackson',666))
+# 3.更新语句能够执行 但是并没有影响表数据
+# res = cursor.execute(sql3)
+# print(res)
+# 4.删除语句能够执行 但是并没有影响表数据
+# res = cursor.execute(sql4)
+# print(res)
+#
+#解释：在针对增删改查操作时他们的重要程度不一样(级别不一样)  查功能的级别是最低的，
+#  增删改都是要影响到数据信息的，pymysql规定必须需要一个二次确认才可生效。

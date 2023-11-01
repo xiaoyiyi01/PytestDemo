@@ -1,0 +1,11 @@
+domain: http://localhost:8088
+
+url:
+  login_url : /mall/useroper/loginHeader
+  add_url : /mall/nyPlatformInfo/add
+  search_url : /mall/nyPlatformInfo
+  update_url : /mall/nyPlatformInfo/update
+  delete_url : /mall/nyPlatformInfo/delete
+  singleUpload_url : /mall/file/singleUpload
+  multiUpload_url : /mall/file/multiUpload
+

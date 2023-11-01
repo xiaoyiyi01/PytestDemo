@@ -1,0 +1,6 @@
+pytest
+    pytest-order
+    pytest-rerunfailures
+    pytest-html
+    pytest-xdist
+    allure-pytest
